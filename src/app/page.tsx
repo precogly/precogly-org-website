@@ -60,7 +60,7 @@ function FadeIn({ children, className = "" }: { children: React.ReactNode; class
   );
 }
 
-function FAQItem({ question, answer }: { question: string; answer: string }) {
+function FAQItem({ question, answer }: { question: string; answer: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -427,11 +427,11 @@ export default function Home() {
               />
               <FAQItem
                 question="How is this different from existing tools?"
-                answer='Existing tools are either "toys" (simple drawing tools) or "products" (expensive closed platforms). Precogly is an open platform: free to use, but architected for enterprise scale, supported by a network of partners.'
+                answer="Open-source tools have paved the way, but the market still lacks an enterprise-grade open platform. Precogly fills that gap: free to use, architected for enterprise scale, and supported by a network of partners."
               />
               <FAQItem
                 question="Who is behind this project?"
-                answer="Vikramaditya - Threat Modeling Connect Chapter Lead (Bangalore) & Security Architect. Advised by senior practitioners from Fortune 500 enterprises."
+                answer={<><a href="https://www.linkedin.com/in/vikramadityanarayan/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">Vikramaditya</a> - Threat Modeling Connect Chapter Lead (Bangalore) and an experienced developer. Advised by senior practitioners from Fortune 500 enterprises.</>}
               />
             </div>
           </FadeIn>
@@ -467,7 +467,7 @@ export default function Home() {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="https://www.linkedin.com/in/vikramaditya-narayan/"
+                href="https://www.linkedin.com/in/vikramadityanarayan/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
