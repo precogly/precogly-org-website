@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import {
   Github,
   Linkedin,
-  Mail,
   Calendar,
   CheckCircle2,
   AlertTriangle,
@@ -88,19 +87,6 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
 }
 
 export default function Home() {
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleEmailSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    // Placeholder for form submission - replace with Formspree endpoint
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setIsSubmitted(true);
-    setIsSubmitting(false);
-  };
-
   return (
     <div className="min-h-screen bg-background font-sans">
       {/* Navigation */}
@@ -130,6 +116,15 @@ export default function Home() {
               <a href="#faq" className="text-muted hover:text-primary transition-colors">
                 FAQ
               </a>
+              <a
+                href="https://github.com/precogly/precogly"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted hover:text-primary transition-colors"
+                aria-label="GitHub"
+              >
+                <Github className="w-5 h-5" />
+              </a>
             </div>
           </div>
         </div>
@@ -158,24 +153,11 @@ export default function Home() {
           </FadeIn>
 
           <FadeIn>
-            <p className="text-lg md:text-xl text-muted mb-4 max-w-3xl mx-auto leading-relaxed">
-              Threat modeling shouldn&apos;t be something you can only do if you buy a $50k license,
-              nor should it be a &quot;checkbox&quot; done by outsiders.
-            </p>
-          </FadeIn>
-
-          <FadeIn>
-            <p className="text-lg md:text-xl text-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-              Precogly is an open platform designed to make threat modeling a core engineering
-              practice that is accessible to every organization on the planet.
-            </p>
-          </FadeIn>
-
-          <FadeIn>
-            <p className="text-muted mb-8">
-              Built for the real world: Scalable, collaborative, and aligned with enterprise
-              security needs.
-            </p>
+            <div className="flex flex-wrap justify-center gap-3 md:gap-6 mb-8">
+              <span className="text-lg md:text-xl font-semibold text-foreground">Free forever.</span>
+              <span className="text-lg md:text-xl font-semibold text-foreground">Community-driven.</span>
+              <span className="text-lg md:text-xl font-semibold text-foreground">Community-owned.</span>
+            </div>
           </FadeIn>
 
           <FadeIn>
@@ -186,31 +168,18 @@ export default function Home() {
           </FadeIn>
 
           <FadeIn>
-            {!isSubmitted ? (
-              <form onSubmit={handleEmailSubmit} className="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your email"
-                  required
-                  className="flex-1 px-4 py-3 rounded-lg border border-primary/20 bg-surface focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
-                />
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="px-6 py-3 bg-accent hover:bg-accent-dark text-white font-medium rounded-lg transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
-                >
-                  <Mail className="w-4 h-4" />
-                  {isSubmitting ? "Submitting..." : "Get Notified"}
-                </button>
-              </form>
-            ) : (
-              <div className="flex items-center justify-center gap-2 text-green-600 bg-green-50 px-6 py-3 rounded-lg max-w-md mx-auto">
-                <CheckCircle2 className="w-5 h-5" />
-                <span>Thanks! We&apos;ll notify you on launch.</span>
-              </div>
-            )}
+            <div className="text-center">
+              <p className="text-muted mb-4">Support the Mission</p>
+              <a
+                href="https://github.com/precogly/precogly"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-accent hover:bg-accent-dark text-white font-medium rounded-lg transition-colors"
+              >
+                <Github className="w-5 h-5" />
+                Star on GitHub
+              </a>
+            </div>
           </FadeIn>
         </div>
       </Section>
@@ -268,7 +237,7 @@ export default function Home() {
                 <h3 className="text-2xl font-semibold text-primary">Precogly fills the gap</h3>
               </div>
               <p className="text-center text-lg text-foreground max-w-2xl mx-auto">
-                We provide an open foundation that supports enterprise scale—without sacrificing
+                We provide an open foundation that supports enterprise scale without sacrificing
                 accessibility or developer freedom.
               </p>
             </div>
@@ -294,14 +263,14 @@ export default function Home() {
 
               <FadeIn>
                 <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-                  Help shape the standard
+                  Architect the Standard
                 </h2>
               </FadeIn>
 
               <FadeIn>
                 <p className="text-muted mb-6 text-lg leading-relaxed">
-                  We are looking for practitioners who want to define the future of open threat
-                  modeling. This is not just about code. We need:
+                  Don&apos;t just consume the tools. Build them. We&apos;re inviting select security
+                  engineers to define the primitives of the next generation of threat modeling.
                 </p>
               </FadeIn>
 
@@ -309,15 +278,15 @@ export default function Home() {
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
-                    <span className="text-foreground">Feedback on workflows and abstractions.</span>
+                    <span className="text-foreground"><strong>Influence</strong> the core architecture and data models.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
-                    <span className="text-foreground">Early architectural design discussions.</span>
+                    <span className="text-foreground"><strong>Shape</strong> workflows before they&apos;re set in stone.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
-                    <span className="text-foreground">Beta testers for the Feb 12 release.</span>
+                    <span className="text-foreground"><strong>Get early access</strong> to the Feb 12 alpha.</span>
                   </li>
                 </ul>
               </FadeIn>
@@ -330,7 +299,7 @@ export default function Home() {
                   className="inline-flex items-center gap-2 px-6 py-3 bg-accent hover:bg-accent-dark text-white font-medium rounded-lg transition-colors"
                 >
                   <Calendar className="w-5 h-5" />
-                  Talk to me about shaping Precogly
+                  Join the Technical Council
                 </a>
               </FadeIn>
             </div>
@@ -350,14 +319,14 @@ export default function Home() {
 
               <FadeIn>
                 <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-                  Call for Founding Partners
+                  Founding Partner Program
                 </h2>
               </FadeIn>
 
               <FadeIn>
                 <p className="text-muted mb-6 text-lg leading-relaxed">
-                  We are selecting an exclusive group of Enterprise Success Partners (ESPs) for the
-                  launch. As a Founding ESP, you will offer:
+                  Equip your consultancy with the industry&apos;s first open-source, enterprise-grade
+                  threat modeling platform. Be the first to bring a modern, AI-ready alternative to your clients.
                 </p>
               </FadeIn>
 
@@ -366,27 +335,20 @@ export default function Home() {
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                     <span className="text-foreground">
-                      Enterprise-grade support and integration services.
+                      <strong>Monetize</strong> support and integration services for your clients.
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <span className="text-foreground">Training and advisory offerings.</span>
+                    <span className="text-foreground"><strong>Deliver</strong> authorized training and certifications.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                     <span className="text-foreground">
-                      A credible alternative to closed, high-cost legacy platforms.
+                      <strong>Win deals</strong> against expensive legacy vendors.
                     </span>
                   </li>
                 </ul>
-              </FadeIn>
-
-              <FadeIn>
-                <p className="text-muted text-sm mb-6 italic">
-                  This program is designed for consultancies and security firms that want to offer
-                  an open-source alternative to their enterprise clients.
-                </p>
               </FadeIn>
 
               <FadeIn>
@@ -397,7 +359,7 @@ export default function Home() {
                   className="inline-flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary-light text-white font-medium rounded-lg transition-colors"
                 >
                   <Calendar className="w-5 h-5" />
-                  Apply to become a Launch Partner
+                  Apply for the Partner Network
                 </a>
               </FadeIn>
             </div>
@@ -465,7 +427,7 @@ export default function Home() {
               />
               <FAQItem
                 question="How is this different from existing tools?"
-                answer='Existing tools are either "toys" (simple drawing tools) or "products" (expensive closed platforms). Precogly is an open platform—free to use, but architected for enterprise scale, supported by a network of partners.'
+                answer='Existing tools are either "toys" (simple drawing tools) or "products" (expensive closed platforms). Precogly is an open platform: free to use, but architected for enterprise scale, supported by a network of partners.'
               />
               <FAQItem
                 question="Who is behind this project?"
@@ -496,7 +458,7 @@ export default function Home() {
 
             <div className="flex items-center gap-4">
               <a
-                href="https://github.com/precogly"
+                href="https://github.com/precogly/precogly"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
