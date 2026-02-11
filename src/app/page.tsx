@@ -392,7 +392,7 @@ export default function Home() {
                 <div className="w-3 h-3 bg-accent rounded-full"></div>
                 <div>
                   <h3 className="font-semibold text-primary">Code Release</h3>
-                  <p className="text-muted">February 12, 2026 (Public GitHub Launch)</p>
+                  <p className="text-muted">February 19, 2026 (Public GitHub Launch)</p>
                 </div>
               </div>
             </FadeIn>
