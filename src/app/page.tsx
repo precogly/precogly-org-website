@@ -163,7 +163,7 @@ export default function Home() {
           <FadeIn>
             <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium mb-8">
               <Rocket className="w-4 h-4" />
-              Public Alpha Code Drop: February 12, 2026
+              Public Alpha Code Drop: February 19, 2026
             </div>
           </FadeIn>
 
