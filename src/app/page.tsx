@@ -286,7 +286,7 @@ export default function Home() {
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
-                    <span className="text-foreground"><strong>Get early access</strong> to the Feb 12 alpha.</span>
+                    <span className="text-foreground"><strong>Get early access</strong> to the Feb 19 alpha.</span>
                   </li>
                 </ul>
               </FadeIn>
