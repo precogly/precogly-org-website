@@ -163,7 +163,7 @@ export default function Home() {
           <FadeIn>
             <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium mb-8">
               <Rocket className="w-4 h-4" />
-              Public Alpha Code Drop: March 5, 2026
+              Public Alpha Code Drop: March 12, 2026
             </div>
           </FadeIn>
 
@@ -286,7 +286,7 @@ export default function Home() {
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
-                    <span className="text-foreground"><strong>Get early access</strong> to the March 5 alpha.</span>
+                    <span className="text-foreground"><strong>Get early access</strong> to the March 12 alpha.</span>
                   </li>
                 </ul>
               </FadeIn>
@@ -392,7 +392,7 @@ export default function Home() {
                 <div className="w-3 h-3 bg-accent rounded-full"></div>
                 <div>
                   <h3 className="font-semibold text-primary">Code Release</h3>
-                  <p className="text-muted">March 5, 2026 (Public GitHub Launch)</p>
+                  <p className="text-muted">March 12, 2026 (Public GitHub Launch)</p>
                 </div>
               </div>
             </FadeIn>
