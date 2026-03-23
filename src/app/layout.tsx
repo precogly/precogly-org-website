@@ -13,12 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Precogly - Open-Source Enterprise Threat Modeling",
-  description: "Open-source, enterprise-grade threat modeling platform. Make threat modeling a core engineering practice accessible to every organization.",
-  keywords: ["threat modeling", "security", "open source", "enterprise", "cybersecurity"],
+  title: "Precogly — Open-Source Enterprise Threat Modeling Platform",
+  description: "Open-source, enterprise-grade threat modeling platform with an advanced DFD editor, compliance mapping (DORA, CRA, ASVS, NIST CSF), community library packs, and an AI-ready REST API. Licensed under Apache 2.0.",
+  keywords: ["threat modeling", "security", "open source", "enterprise", "cybersecurity", "DFD editor", "STRIDE", "MITRE ATT&CK", "compliance", "DORA", "ASVS"],
   openGraph: {
-    title: "Precogly - Open-Source Enterprise Threat Modeling",
-    description: "Open-source, enterprise-grade threat modeling platform. Make threat modeling a core engineering practice accessible to every organization.",
+    title: "Precogly — Open-Source Enterprise Threat Modeling Platform",
+    description: "Open-source, enterprise-grade threat modeling platform with an advanced DFD editor, compliance mapping (DORA, CRA, ASVS, NIST CSF), community library packs, and an AI-ready REST API. Licensed under Apache 2.0.",
     type: "website",
   },
 };

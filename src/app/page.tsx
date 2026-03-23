@@ -3,8 +3,8 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import {
-  Github,
-  Linkedin,
+  GithubIcon,
+  LinkedinIcon,
   Calendar,
   CheckCircle2,
   AlertTriangle,
@@ -12,6 +12,17 @@ import {
   Building2,
   Rocket,
   ChevronDown,
+  BookOpen,
+  Workflow,
+  Library,
+  FileJson,
+  ShieldCheck,
+  Cpu,
+  Shield,
+  Code,
+  GraduationCap,
+  ClipboardCheck,
+  Terminal,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -107,14 +118,26 @@ export default function Home() {
               <a href="#why" className="text-muted hover:text-primary transition-colors">
                 Why Precogly
               </a>
+              <a href="#features" className="text-muted hover:text-primary transition-colors">
+                Features
+              </a>
+              <a href="#get-started" className="text-muted hover:text-primary transition-colors">
+                Get Started
+              </a>
               <a href="#collaborators" className="text-muted hover:text-primary transition-colors">
                 Collaborate
               </a>
-              <a href="#partners" className="text-muted hover:text-primary transition-colors">
-                Partners
-              </a>
               <a href="#faq" className="text-muted hover:text-primary transition-colors">
                 FAQ
+              </a>
+              <a
+                href="https://precogly.github.io/precogly"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-muted hover:text-primary transition-colors"
+              >
+                <BookOpen className="w-4 h-4" />
+                Docs
               </a>
               <a
                 href="https://github.com/precogly/precogly"
@@ -123,7 +146,7 @@ export default function Home() {
                 className="text-muted hover:text-primary transition-colors"
                 aria-label="GitHub"
               >
-                <Github className="w-5 h-5" />
+                <GithubIcon className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -162,21 +185,27 @@ export default function Home() {
 
           <FadeIn>
             <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium mb-8">
-              <Rocket className="w-4 h-4" />
-              Public Alpha Code Drop: March 12, 2026
+              <CheckCircle2 className="w-4 h-4" />
+              Now Available — Open Source under Apache 2.0
             </div>
           </FadeIn>
 
           <FadeIn>
-            <div className="text-center">
-              <p className="text-muted mb-4">Support the Mission</p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href="#get-started"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-accent hover:bg-accent-dark text-white font-medium rounded-lg transition-colors"
+              >
+                <Rocket className="w-5 h-5" />
+                Get Started
+              </a>
               <a
                 href="https://github.com/precogly/precogly"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-accent hover:bg-accent-dark text-white font-medium rounded-lg transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 border border-accent text-accent hover:bg-accent/10 font-medium rounded-lg transition-colors"
               >
-                <Github className="w-5 h-5" />
+                <GithubIcon className="w-5 h-5" />
                 Star on GitHub
               </a>
             </div>
@@ -245,6 +274,256 @@ export default function Home() {
         </div>
       </Section>
 
+      {/* Product Showcase Section */}
+      <Section id="showcase">
+        <div className="max-w-4xl mx-auto">
+          <FadeIn>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-12">
+              See Precogly in Action
+            </h2>
+          </FadeIn>
+
+          <FadeIn>
+            <div className="aspect-video rounded-xl shadow-lg overflow-hidden">
+              <iframe
+                src="https://www.youtube.com/embed/5sSuZOAtyn4"
+                title="Precogly Walkthrough"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+          </FadeIn>
+        </div>
+      </Section>
+
+      {/* Features Section */}
+      <Section id="features" className="bg-surface-alt">
+        <div className="max-w-5xl mx-auto">
+          <FadeIn>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-12">
+              Built for Enterprise Threat Modeling
+            </h2>
+          </FadeIn>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <FadeIn>
+              <div className="bg-surface p-8 rounded-xl shadow-sm border border-primary/5">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 bg-accent/10 rounded-lg">
+                    <Workflow className="w-6 h-6 text-accent" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-primary">Advanced DFD Editor</h3>
+                </div>
+                <p className="text-muted leading-relaxed">
+                  Nested components, trust zones, trust boundaries. Built on React Flow.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn>
+              <div className="bg-surface p-8 rounded-xl shadow-sm border border-primary/5">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 bg-accent/10 rounded-lg">
+                    <Library className="w-6 h-6 text-accent" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-primary">Community Library Packs</h3>
+                </div>
+                <p className="text-muted leading-relaxed">
+                  MITRE ATT&CK, CAPEC, LINDDUN, STRIDE. Packs for AWS, Azure, GCP, banking.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn>
+              <div className="bg-surface p-8 rounded-xl shadow-sm border border-primary/5">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 bg-accent/10 rounded-lg">
+                    <FileJson className="w-6 h-6 text-accent" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-primary">TM-BOM Interoperability</h3>
+                </div>
+                <p className="text-muted leading-relaxed">
+                  Import/export TM-BOM JSON. No vendor lock-in.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn>
+              <div className="bg-surface p-8 rounded-xl shadow-sm border border-primary/5">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 bg-accent/10 rounded-lg">
+                    <ShieldCheck className="w-6 h-6 text-accent" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-primary">Compliance Mapping</h3>
+                </div>
+                <p className="text-muted leading-relaxed">
+                  DORA, CRA, ASVS, NIST CSF, SOC 2 traceability.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn>
+              <div className="bg-surface p-8 rounded-xl shadow-sm border border-primary/5">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 bg-accent/10 rounded-lg">
+                    <Cpu className="w-6 h-6 text-accent" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-primary">AI-Agent Ready API</h3>
+                </div>
+                <p className="text-muted leading-relaxed">
+                  REST API + OpenAPI docs. Foundation for AI assistants.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn>
+              <div className="bg-surface p-8 rounded-xl shadow-sm border border-primary/5">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 bg-accent/10 rounded-lg">
+                    <Users className="w-6 h-6 text-accent" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-primary">Team Collaboration</h3>
+                </div>
+                <p className="text-muted leading-relaxed">
+                  Workspace-based threat modeling with real-time collaboration.
+                </p>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </Section>
+
+      {/* Who Is It For Section */}
+      <Section id="audience">
+        <div className="max-w-5xl mx-auto">
+          <FadeIn>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-12">
+              Who Is Precogly For?
+            </h2>
+          </FadeIn>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <FadeIn>
+              <div className="bg-surface p-8 rounded-xl shadow-sm border border-primary/5">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 bg-accent/10 rounded-lg">
+                    <Shield className="w-6 h-6 text-accent" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-primary">Security Architects</h3>
+                </div>
+                <p className="text-muted leading-relaxed">
+                  Scale threat modeling across your org.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn>
+              <div className="bg-surface p-8 rounded-xl shadow-sm border border-primary/5">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 bg-accent/10 rounded-lg">
+                    <Code className="w-6 h-6 text-accent" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-primary">Security Engineers</h3>
+                </div>
+                <p className="text-muted leading-relaxed">
+                  Build AI assistants on a structured CRUD foundation. REST API + OpenAPI included.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn>
+              <div className="bg-surface p-8 rounded-xl shadow-sm border border-primary/5">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 bg-accent/10 rounded-lg">
+                    <GraduationCap className="w-6 h-6 text-accent" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-primary">Consultants & Trainers</h3>
+                </div>
+                <p className="text-muted leading-relaxed">
+                  Deliver workshops with reference images, collaboration, structured programs.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn>
+              <div className="bg-surface p-8 rounded-xl shadow-sm border border-primary/5">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 bg-accent/10 rounded-lg">
+                    <ClipboardCheck className="w-6 h-6 text-accent" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-primary">Compliance Professionals</h3>
+                </div>
+                <p className="text-muted leading-relaxed">
+                  Link threat models to ASVS, CRA, DORA, NIST CSF, SOC 2.
+                </p>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </Section>
+
+      {/* Get Started Section */}
+      <Section id="get-started" className="bg-surface-alt">
+        <div className="max-w-3xl mx-auto">
+          <FadeIn>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-12">
+              Get Started in 60 Seconds
+            </h2>
+          </FadeIn>
+
+          <FadeIn>
+            <div className="bg-foreground rounded-xl p-6 md:p-8 shadow-lg">
+              <div className="flex items-center gap-2 mb-4">
+                <Terminal className="w-5 h-5 text-white/60" />
+                <span className="text-white/60 text-sm font-mono">terminal</span>
+              </div>
+              <pre className="text-white font-mono text-sm md:text-base leading-relaxed overflow-x-auto">
+{`git clone https://github.com/precogly/precogly.git
+cd precogly
+docker compose up --build`}
+              </pre>
+            </div>
+          </FadeIn>
+
+          <FadeIn>
+            <p className="text-center text-muted mt-6 mb-8">
+              Open{" "}
+              <code className="bg-primary/5 px-2 py-1 rounded text-sm font-mono">
+                http://localhost:5173
+              </code>{" "}
+              and log in with{" "}
+              <code className="bg-primary/5 px-2 py-1 rounded text-sm font-mono">
+                admin@precogly.dev / admin123
+              </code>
+            </p>
+          </FadeIn>
+
+          <FadeIn>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href="https://github.com/precogly/precogly"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-accent hover:bg-accent-dark text-white font-medium rounded-lg transition-colors"
+              >
+                <GithubIcon className="w-5 h-5" />
+                View on GitHub
+              </a>
+              <a
+                href="https://precogly.github.io/precogly"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 border border-accent text-accent hover:bg-accent/10 font-medium rounded-lg transition-colors"
+              >
+                <BookOpen className="w-5 h-5" />
+                Read the Docs
+              </a>
+            </div>
+          </FadeIn>
+        </div>
+      </Section>
+
       {/* For Collaborators Section */}
       <Section id="collaborators">
         <div className="max-w-5xl mx-auto">
@@ -286,7 +565,7 @@ export default function Home() {
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
-                    <span className="text-foreground"><strong>Get early access</strong> to the March 12 alpha.</span>
+                    <span className="text-foreground"><strong>Contribute</strong> to the core platform and library packs.</span>
                   </li>
                 </ul>
               </FadeIn>
@@ -379,20 +658,10 @@ export default function Home() {
           <div className="space-y-6">
             <FadeIn>
               <div className="flex items-center gap-4 bg-surface p-6 rounded-xl shadow-sm">
-                <div className="w-3 h-3 bg-yellow-500 rounded-full animate-pulse"></div>
+                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                 <div>
-                  <h3 className="font-semibold text-primary">Platform</h3>
-                  <p className="text-muted">Under active development</p>
-                </div>
-              </div>
-            </FadeIn>
-
-            <FadeIn>
-              <div className="flex items-center gap-4 bg-surface p-6 rounded-xl shadow-sm">
-                <div className="w-3 h-3 bg-accent rounded-full"></div>
-                <div>
-                  <h3 className="font-semibold text-primary">Code Release</h3>
-                  <p className="text-muted">March 12, 2026 (Public GitHub Launch)</p>
+                  <h3 className="font-semibold text-primary">Alpha Released</h3>
+                  <p className="text-muted">Platform publicly available on GitHub under Apache 2.0.</p>
                 </div>
               </div>
             </FadeIn>
@@ -401,8 +670,28 @@ export default function Home() {
               <div className="flex items-center gap-4 bg-surface p-6 rounded-xl shadow-sm">
                 <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                 <div>
-                  <h3 className="font-semibold text-primary">Ecosystem</h3>
-                  <p className="text-muted">Partner network currently forming</p>
+                  <h3 className="font-semibold text-primary">Library Packs</h3>
+                  <p className="text-muted">AWS, Azure, GCP, banking, and compliance packs available.</p>
+                </div>
+              </div>
+            </FadeIn>
+
+            <FadeIn>
+              <div className="flex items-center gap-4 bg-surface p-6 rounded-xl shadow-sm">
+                <div className="w-3 h-3 bg-yellow-500 rounded-full animate-pulse"></div>
+                <div>
+                  <h3 className="font-semibold text-primary">Community Growth</h3>
+                  <p className="text-muted">Growing contributor ecosystem and partner network.</p>
+                </div>
+              </div>
+            </FadeIn>
+
+            <FadeIn>
+              <div className="flex items-center gap-4 bg-surface p-6 rounded-xl shadow-sm">
+                <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                <div>
+                  <h3 className="font-semibold text-primary">AI Agent Integration</h3>
+                  <p className="text-muted">Native AI assistant workflows and enhanced API capabilities.</p>
                 </div>
               </div>
             </FadeIn>
@@ -423,15 +712,27 @@ export default function Home() {
             <div className="bg-surface rounded-xl p-6 md:p-8 shadow-sm border border-primary/5">
               <FAQItem
                 question="Is Precogly open source?"
-                answer="Yes. It will be released under a standard open-source license."
+                answer="Yes. Released under Apache 2.0. Full source on GitHub."
               />
               <FAQItem
                 question="How is this different from existing tools?"
-                answer="Open-source tools have paved the way, but the market still lacks an enterprise-grade open platform. Precogly fills that gap: free to use, architected for enterprise scale, and supported by a network of partners."
+                answer="Precogly is compliance-aware out of the box, ships with structured library packs (MITRE ATT&CK, STRIDE, LINDDUN, and more), includes a full REST API for automation and AI agents, and has no licensing fees. It fills the gap between ad-hoc open tools and expensive commercial platforms."
               />
               <FAQItem
                 question="Who is behind this project?"
                 answer={<><a href="https://www.linkedin.com/in/vikramadityanarayan/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">Vikramaditya</a> - Threat Modeling Connect Chapter Lead (Bangalore) and an experienced developer. Advised by senior practitioners from Fortune 500 enterprises.</>}
+              />
+              <FAQItem
+                question="What do I need to run Precogly?"
+                answer="Docker and Docker Compose. Clone the repo, run docker compose up --build, and open localhost:5173. Three commands to a running instance."
+              />
+              <FAQItem
+                question="Can I contribute?"
+                answer={<>Absolutely. We welcome contributions to the core platform, library packs, documentation, and bug reports. Head to <a href="https://github.com/precogly/precogly" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">GitHub</a> to get started.</>}
+              />
+              <FAQItem
+                question="What frameworks does Precogly support?"
+                answer="MITRE ATT&CK, CAPEC, LINDDUN, STRIDE for threat identification. DORA, CRA, ASVS, NIST CSF, and SOC 2 for compliance mapping. More packs are added by the community."
               />
             </div>
           </FadeIn>
@@ -464,7 +765,16 @@ export default function Home() {
                 className="p-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
                 aria-label="GitHub"
               >
-                <Github className="w-5 h-5" />
+                <GithubIcon className="w-5 h-5" />
+              </a>
+              <a
+                href="https://precogly.github.io/precogly"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
+                aria-label="Documentation"
+              >
+                <BookOpen className="w-5 h-5" />
               </a>
               <a
                 href="https://www.linkedin.com/in/vikramadityanarayan/"
@@ -473,13 +783,14 @@ export default function Home() {
                 className="p-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
                 aria-label="LinkedIn"
               >
-                <Linkedin className="w-5 h-5" />
+                <LinkedinIcon className="w-5 h-5" />
               </a>
             </div>
           </div>
 
-          <div className="mt-8 pt-8 border-t border-white/10 text-center text-sm text-white/60">
-            <p>&copy; {new Date().getFullYear()} Precogly. All rights reserved.</p>
+          <div className="mt-8 pt-8 border-t border-white/10 text-center text-sm text-white/60 space-y-2">
+            <p>Built with React, Django, PostgreSQL, and Docker</p>
+            <p>&copy; {new Date().getFullYear()} Precogly. All rights reserved. Licensed under Apache 2.0.</p>
           </div>
         </div>
       </footer>
