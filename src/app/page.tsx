@@ -479,7 +479,7 @@ export default function Home() {
                 <span className="text-white/60 text-sm font-mono">terminal</span>
               </div>
               <pre className="text-white font-mono text-sm md:text-base leading-relaxed overflow-x-auto">
-{`git clone https://github.com/precogly/precogly.git
+{`git clone --branch v0.1.0 https://github.com/precogly/precogly.git
 cd precogly
 docker compose up --build`}
               </pre>
