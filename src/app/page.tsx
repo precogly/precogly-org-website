@@ -140,6 +140,13 @@ export default function Home() {
                 FAQ
               </a>
               <a
+                href="/learn"
+                className="inline-flex items-center gap-1 text-muted hover:text-primary transition-colors"
+              >
+                <GraduationCap className="w-4 h-4" />
+                Training
+              </a>
+              <a
                 href="https://precogly.github.io/precogly"
                 target="_blank"
                 rel="noopener noreferrer"
