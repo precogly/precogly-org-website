@@ -23,6 +23,7 @@ import {
   GraduationCap,
   ClipboardCheck,
   Terminal,
+  Award,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -100,8 +101,16 @@ function FAQItem({ question, answer }: { question: string; answer: React.ReactNo
 export default function Home() {
   return (
     <div className="min-h-screen bg-background font-sans">
+      {/* OWASP Announcement Banner */}
+      <div className="fixed top-0 left-0 right-0 z-50 bg-foreground text-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex items-center justify-center gap-2 text-sm font-medium">
+          <Award className="w-4 h-4 text-yellow-400 flex-shrink-0" />
+          <span>Precogly is now an official <strong>OWASP Project</strong></span>
+        </div>
+      </div>
+
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-primary/10">
+      <nav className="fixed top-10 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-primary/10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-3">
@@ -154,7 +163,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <Section className="pt-32 md:pt-40 pb-16 md:pb-24">
+      <Section className="pt-42 md:pt-50 pb-16 md:pb-24">
         <div className="max-w-4xl mx-auto text-center">
           <FadeIn>
             <div className="flex justify-center mb-8">
