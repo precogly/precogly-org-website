@@ -9,7 +9,6 @@ import {
   LinkedinIcon,
   ArrowLeft,
   Clock,
-  DollarSign,
   User,
   CheckCircle2,
   GraduationCap,
@@ -151,15 +150,9 @@ export default function LearnPage() {
           </FadeIn>
 
           <FadeIn>
-            <div className="flex flex-wrap justify-center gap-6 md:gap-10 mb-8">
-              <div className="flex items-center gap-2 text-muted">
-                <Clock className="w-5 h-5 text-accent" />
-                <span className="text-lg font-medium">2-Day Course</span>
-              </div>
-              <div className="flex items-center gap-2 text-muted">
-                <DollarSign className="w-5 h-5 text-accent" />
-                <span className="text-lg font-medium">$2,500 USD</span>
-              </div>
+            <div className="flex items-center justify-center gap-2 text-muted mb-8">
+              <Clock className="w-5 h-5 text-accent" />
+              <span className="text-lg font-medium">2-Day Course</span>
             </div>
           </FadeIn>
 
@@ -171,8 +164,22 @@ export default function LearnPage() {
                 <strong className="text-primary">Vikramaditya Narayan</strong>
               </span>
             </div>
-            <p className="text-muted mt-1">
+            <p className="text-muted mt-1 mb-8">
               Creator and Project Leader, OWASP Precogly
+            </p>
+          </FadeIn>
+
+          <FadeIn>
+            <p className="text-sm text-muted text-center max-w-xl mx-auto">
+              OWASP Precogly is free and open-source. Professional training is
+              offered independently by the project creator. Contact{" "}
+              <a
+                href="mailto:vikram@precogly.org"
+                className="text-accent hover:underline"
+              >
+                vikram@precogly.org
+              </a>{" "}
+              for more info.
             </p>
           </FadeIn>
         </div>
@@ -560,8 +567,7 @@ export default function LearnPage() {
               <div className="space-y-4 text-muted leading-relaxed">
                 <p>
                   A certificate of proficiency exam is available as an optional
-                  add-on (<strong className="text-primary">$300</strong>). The
-                  proficiency exam is a standalone practical assessment
+                  add-on. The proficiency exam is a standalone practical assessment
                   administered after the Day 2 capstone exercise. Students are
                   given a system scenario and must independently produce a threat
                   model in Precogly, including system architecture, threat
