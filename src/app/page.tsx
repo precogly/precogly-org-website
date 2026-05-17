@@ -147,6 +147,13 @@ export default function Home() {
                 Learn
               </a>
               <a
+                href="/practitioners"
+                className="inline-flex items-center gap-1 text-muted hover:text-primary transition-colors"
+              >
+                <Users className="w-4 h-4" />
+                Practitioners
+              </a>
+              <a
                 href="https://precogly.github.io/precogly"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -599,29 +606,30 @@ docker compose up --build`}
               </FadeIn>
             </div>
 
-            {/* For Partners Section */}
-            <div id="partners">
+            {/* For Practitioners Section */}
+            <div id="practitioners">
               <FadeIn>
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-2 bg-primary/10 rounded-lg">
-                    <Building2 className="w-6 h-6 text-primary" />
+                    <Users className="w-6 h-6 text-primary" />
                   </div>
                   <span className="text-sm font-medium text-primary uppercase tracking-wider">
-                    For Partners
+                    For Practitioners
                   </span>
                 </div>
               </FadeIn>
 
               <FadeIn>
                 <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-                  Founding Partner Program
+                  Practitioner Directory
                 </h2>
               </FadeIn>
 
               <FadeIn>
                 <p className="text-muted mb-6 text-lg leading-relaxed">
-                  Equip your consultancy with the industry&apos;s first open-source, enterprise-grade
-                  threat modeling platform. Be the first to bring a modern, AI-ready alternative to your clients.
+                  Offer threat modeling services using the industry&apos;s first open-source,
+                  enterprise-grade threat modeling tool. Get listed and connect with
+                  organizations looking for expert help.
                 </p>
               </FadeIn>
 
@@ -630,17 +638,19 @@ docker compose up --build`}
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                     <span className="text-foreground">
-                      <strong>Monetize</strong> support and integration services for your clients.
+                      <strong>Provide</strong> training, customization, integration, and consulting services.
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <span className="text-foreground"><strong>Deliver</strong> authorized training and certifications.</span>
+                    <span className="text-foreground">
+                      <strong>Get listed</strong> in our practitioner directory and grow your visibility.
+                    </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                     <span className="text-foreground">
-                      <strong>Win deals</strong> against expensive legacy vendors.
+                      <strong>Join</strong> a growing ecosystem of security professionals using Precogly.
                     </span>
                   </li>
                 </ul>
@@ -648,13 +658,11 @@ docker compose up --build`}
 
               <FadeIn>
                 <a
-                  href="https://calendly.com/vikramsnarayan/30min"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/practitioners"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary-light text-white font-medium rounded-lg transition-colors"
                 >
-                  <Calendar className="w-5 h-5" />
-                  Apply for the Partner Network
+                  <Users className="w-5 h-5" />
+                  View Practitioners
                 </a>
               </FadeIn>
             </div>

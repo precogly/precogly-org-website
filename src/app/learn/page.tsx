@@ -123,6 +123,13 @@ export default function LearnPage() {
                 Home
               </a>
               <a
+                href="/practitioners"
+                className="inline-flex items-center gap-1 text-muted hover:text-primary transition-colors"
+              >
+                <Users className="w-4 h-4" />
+                Practitioners
+              </a>
+              <a
                 href={DOCS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
