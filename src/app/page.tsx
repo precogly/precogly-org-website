@@ -502,7 +502,7 @@ export default function Home() {
                 <span className="text-white/60 text-sm font-mono">terminal</span>
               </div>
               <pre className="text-white font-mono text-sm md:text-base leading-relaxed overflow-x-auto">
-{`git clone --branch v0.1.0 https://github.com/precogly/precogly.git
+{`git clone --branch v0.2.0 https://github.com/precogly/precogly.git
 cd precogly
 docker compose up --build`}
               </pre>
@@ -684,7 +684,7 @@ docker compose up --build`}
               <div className="flex items-center gap-4 bg-surface p-6 rounded-xl shadow-sm">
                 <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                 <div>
-                  <h3 className="font-semibold text-primary">Alpha Released</h3>
+                  <h3 className="font-semibold text-primary">v0.2.0 Released</h3>
                   <p className="text-muted">Platform publicly available on GitHub under Apache 2.0.</p>
                 </div>
               </div>
