@@ -16,9 +16,11 @@ import {
   Building2,
   LinkedinIcon,
   Mail,
+  PlayCircle,
 } from "lucide-react";
 
 const DOCS_URL = "https://precogly.github.io/precogly";
+const DEMO_URL = "https://try.precogly.org/";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -179,6 +181,15 @@ export default function PractitionersPage() {
                 aria-label="GitHub"
               >
                 <GithubIcon className="w-5 h-5" />
+              </a>
+              <a
+                href={DEMO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-accent hover:bg-accent-dark text-white font-medium rounded-lg transition-colors"
+              >
+                <PlayCircle className="w-4 h-4" />
+                Live Demo
               </a>
             </div>
           </div>

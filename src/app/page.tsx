@@ -24,6 +24,7 @@ import {
   ClipboardCheck,
   Terminal,
   Award,
+  PlayCircle,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -171,6 +172,15 @@ export default function Home() {
               >
                 <GithubIcon className="w-5 h-5" />
               </a>
+              <a
+                href="https://try.precogly.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-accent hover:bg-accent-dark text-white font-medium rounded-lg transition-colors"
+              >
+                <PlayCircle className="w-4 h-4" />
+                Live Demo
+              </a>
             </div>
           </div>
         </div>
@@ -216,11 +226,20 @@ export default function Home() {
           <FadeIn>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="#get-started"
+                href="https://try.precogly.org/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-accent hover:bg-accent-dark text-white font-medium rounded-lg transition-colors"
               >
+                <PlayCircle className="w-5 h-5" />
+                Try the Live Demo
+              </a>
+              <a
+                href="#get-started"
+                className="inline-flex items-center gap-2 px-6 py-3 border border-accent text-accent hover:bg-accent/10 font-medium rounded-lg transition-colors"
+              >
                 <Rocket className="w-5 h-5" />
-                Get Started
+                Self-Host with Docker
               </a>
               <a
                 href="https://github.com/precogly/precogly"
@@ -232,6 +251,15 @@ export default function Home() {
                 Star on GitHub
               </a>
             </div>
+          </FadeIn>
+
+          {/* The demo is a shared instance that is wiped periodically, so say so
+              next to the button rather than letting someone lose real work. */}
+          <FadeIn>
+            <p className="text-sm text-muted mt-4">
+              No install required. The demo is a shared instance and its data is reset
+              periodically.
+            </p>
           </FadeIn>
         </div>
       </Section>
@@ -496,6 +524,27 @@ export default function Home() {
           </FadeIn>
 
           <FadeIn>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4 justify-between bg-surface p-6 rounded-xl border border-accent/20 mb-8">
+              <div>
+                <h3 className="font-semibold text-primary mb-1">Don&apos;t want to install anything?</h3>
+                <p className="text-muted text-sm">
+                  Open the hosted demo in your browser. Shared instance, reset periodically —
+                  explore freely, but keep real threat models on your own deployment.
+                </p>
+              </div>
+              <a
+                href="https://try.precogly.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-accent hover:bg-accent-dark text-white font-medium rounded-lg transition-colors whitespace-nowrap self-start sm:self-auto"
+              >
+                <PlayCircle className="w-5 h-5" />
+                Live Demo
+              </a>
+            </div>
+          </FadeIn>
+
+          <FadeIn>
             <div className="bg-foreground rounded-xl p-6 md:p-8 shadow-lg">
               <div className="flex items-center gap-2 mb-4">
                 <Terminal className="w-5 h-5 text-white/60" />
@@ -747,6 +796,10 @@ docker compose up --build`}
                 answer={<><a href="https://www.linkedin.com/in/vikramadityanarayan/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">Vikramaditya</a> - Threat Modeling Connect Chapter Lead (Bangalore) and an experienced developer. Advised by senior practitioners from Fortune 500 enterprises.</>}
               />
               <FAQItem
+                question="Can I try Precogly without installing it?"
+                answer={<>Yes. <a href="https://try.precogly.org/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">try.precogly.org</a> is a hosted demo you can open in your browser. It is a shared instance and its data is reset periodically, so use it to evaluate the tool and self-host once you want to keep your threat models.</>}
+              />
+              <FAQItem
                 question="What do I need to run Precogly?"
                 answer="Docker and Docker Compose. Clone the repo, run docker compose up --build, and open localhost:5173. Three commands to a running instance."
               />
@@ -782,6 +835,15 @@ docker compose up --build`}
             </div>
 
             <div className="flex items-center gap-4">
+              <a
+                href="https://try.precogly.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
+                aria-label="Live demo"
+              >
+                <PlayCircle className="w-5 h-5" />
+              </a>
               <a
                 href="https://github.com/precogly/precogly"
                 target="_blank"
