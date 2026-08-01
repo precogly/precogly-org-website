@@ -34,7 +34,7 @@ import {
 } from "lucide-react";
 
 const DOCS_URL = "https://precogly.github.io/precogly";
-const DEMO_URL = "https://try.precogly.org/";
+const DEMO_URL = "https://app.precogly.org/";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },

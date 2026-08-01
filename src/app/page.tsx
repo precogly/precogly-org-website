@@ -173,7 +173,7 @@ export default function Home() {
                 <GithubIcon className="w-5 h-5" />
               </a>
               <a
-                href="https://try.precogly.org/"
+                href="https://app.precogly.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-accent hover:bg-accent-dark text-white font-medium rounded-lg transition-colors"
@@ -226,7 +226,7 @@ export default function Home() {
           <FadeIn>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="https://try.precogly.org/"
+                href="https://app.precogly.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-accent hover:bg-accent-dark text-white font-medium rounded-lg transition-colors"
@@ -533,7 +533,7 @@ export default function Home() {
                 </p>
               </div>
               <a
-                href="https://try.precogly.org/"
+                href="https://app.precogly.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-accent hover:bg-accent-dark text-white font-medium rounded-lg transition-colors whitespace-nowrap self-start sm:self-auto"
@@ -551,7 +551,7 @@ export default function Home() {
                 <span className="text-white/60 text-sm font-mono">terminal</span>
               </div>
               <pre className="text-white font-mono text-sm md:text-base leading-relaxed overflow-x-auto">
-{`git clone --branch v0.2.0 https://github.com/precogly/precogly.git
+{`git clone --branch v0.3.0 https://github.com/precogly/precogly.git
 cd precogly
 docker compose up --build`}
               </pre>
@@ -733,7 +733,7 @@ docker compose up --build`}
               <div className="flex items-center gap-4 bg-surface p-6 rounded-xl shadow-sm">
                 <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                 <div>
-                  <h3 className="font-semibold text-primary">v0.2.0 Released</h3>
+                  <h3 className="font-semibold text-primary">v0.3.0 Released</h3>
                   <p className="text-muted">Platform publicly available on GitHub under Apache 2.0.</p>
                 </div>
               </div>
@@ -797,7 +797,7 @@ docker compose up --build`}
               />
               <FAQItem
                 question="Can I try Precogly without installing it?"
-                answer={<>Yes. <a href="https://try.precogly.org/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">try.precogly.org</a> is a hosted demo you can open in your browser. It is a shared instance and its data is reset periodically, so use it to evaluate the tool and self-host once you want to keep your threat models.</>}
+                answer={<>Yes. <a href="https://app.precogly.org/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">app.precogly.org</a> is a hosted demo you can open in your browser. It is a shared instance and its data is reset periodically, so use it to evaluate the tool and self-host once you want to keep your threat models.</>}
               />
               <FAQItem
                 question="What do I need to run Precogly?"
@@ -836,7 +836,7 @@ docker compose up --build`}
 
             <div className="flex items-center gap-4">
               <a
-                href="https://try.precogly.org/"
+                href="https://app.precogly.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
