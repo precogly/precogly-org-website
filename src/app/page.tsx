@@ -367,7 +367,7 @@ export default function Home() {
                   <h3 className="text-lg font-semibold text-primary">Advanced DFD Editor</h3>
                 </div>
                 <p className="text-muted leading-relaxed">
-                  Nested components, trust zones, trust boundaries. Built on React Flow.
+                  Drag-and-drop component panel, trust zones, notation switching (DFD3 / Yourdon-DeMarco). Built on React Flow.
                 </p>
               </div>
             </FadeIn>
@@ -381,7 +381,7 @@ export default function Home() {
                   <h3 className="text-lg font-semibold text-primary">Community Library Packs</h3>
                 </div>
                 <p className="text-muted leading-relaxed">
-                  MITRE ATT&CK, CAPEC, LINDDUN, STRIDE. Packs for AWS, Azure, GCP, banking.
+                  MITRE ATT&CK, CAPEC, CWE, MITRE ATLAS, LINDDUN, STRIDE, OWASP LLM Top 10. Packs for AWS, Azure, GCP, banking, and AI/ML.
                 </p>
               </div>
             </FadeIn>
@@ -395,7 +395,7 @@ export default function Home() {
                   <h3 className="text-lg font-semibold text-primary">TM-BOM Interoperability</h3>
                 </div>
                 <p className="text-muted leading-relaxed">
-                  Import/export TM-BOM JSON. No vendor lock-in.
+                  CycloneDX 2.0 TM-BOM import/export. CSV and Word report generation. No vendor lock-in.
                 </p>
               </div>
             </FadeIn>
@@ -420,10 +420,10 @@ export default function Home() {
                   <div className="p-2 bg-accent/10 rounded-lg">
                     <Cpu className="w-6 h-6 text-accent" />
                   </div>
-                  <h3 className="text-lg font-semibold text-primary">AI-Agent Ready API</h3>
+                  <h3 className="text-lg font-semibold text-primary">AI-Powered Threat Modeling</h3>
                 </div>
                 <p className="text-muted leading-relaxed">
-                  REST API + OpenAPI docs. Foundation for AI assistants.
+                  LLM threat suggestion, DFD generation from architecture diagrams, built-in MCP server, and bring-your-own-model support.
                 </p>
               </div>
             </FadeIn>
@@ -478,7 +478,7 @@ export default function Home() {
                   <h3 className="text-xl font-semibold text-primary">Security Engineers</h3>
                 </div>
                 <p className="text-muted leading-relaxed">
-                  Build AI assistants on a structured CRUD foundation. REST API + OpenAPI included.
+                  Build AI assistants on a structured CRUD foundation. REST API, OpenAPI, and built-in MCP server included.
                 </p>
               </div>
             </FadeIn>
@@ -551,7 +551,7 @@ export default function Home() {
                 <span className="text-white/60 text-sm font-mono">terminal</span>
               </div>
               <pre className="text-white font-mono text-sm md:text-base leading-relaxed overflow-x-auto">
-{`git clone --branch v0.3.0 https://github.com/precogly/precogly.git
+{`git clone --branch v0.4.0 https://github.com/precogly/precogly.git
 cd precogly
 docker compose up --build`}
               </pre>
@@ -733,8 +733,8 @@ docker compose up --build`}
               <div className="flex items-center gap-4 bg-surface p-6 rounded-xl shadow-sm">
                 <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                 <div>
-                  <h3 className="font-semibold text-primary">v0.3.0 Released</h3>
-                  <p className="text-muted">Platform publicly available on GitHub under Apache 2.0.</p>
+                  <h3 className="font-semibold text-primary">v0.4.0 Released</h3>
+                  <p className="text-muted">AI-powered threat suggestion, MCP server, CycloneDX 2.0, risk register, and OAuth 2.1.</p>
                 </div>
               </div>
             </FadeIn>
@@ -743,8 +743,18 @@ docker compose up --build`}
               <div className="flex items-center gap-4 bg-surface p-6 rounded-xl shadow-sm">
                 <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                 <div>
-                  <h3 className="font-semibold text-primary">Library Packs</h3>
-                  <p className="text-muted">AWS, Azure, GCP, banking, and compliance packs available.</p>
+                  <h3 className="font-semibold text-primary">Library Packs &amp; Taxonomies</h3>
+                  <p className="text-muted">AWS, Azure, GCP, banking, AI/ML, CAPEC, CWE, MITRE ATLAS, and OWASP LLM Top 10 packs.</p>
+                </div>
+              </div>
+            </FadeIn>
+
+            <FadeIn>
+              <div className="flex items-center gap-4 bg-surface p-6 rounded-xl shadow-sm">
+                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                <div>
+                  <h3 className="font-semibold text-primary">AI Agent Integration</h3>
+                  <p className="text-muted">Built-in MCP server, bring-your-own-model, DFD generation from architecture diagrams.</p>
                 </div>
               </div>
             </FadeIn>
@@ -755,16 +765,6 @@ docker compose up --build`}
                 <div>
                   <h3 className="font-semibold text-primary">Community Growth</h3>
                   <p className="text-muted">Growing contributor ecosystem and partner network.</p>
-                </div>
-              </div>
-            </FadeIn>
-
-            <FadeIn>
-              <div className="flex items-center gap-4 bg-surface p-6 rounded-xl shadow-sm">
-                <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                <div>
-                  <h3 className="font-semibold text-primary">AI Agent Integration</h3>
-                  <p className="text-muted">Native AI assistant workflows and enhanced API capabilities.</p>
                 </div>
               </div>
             </FadeIn>
@@ -789,7 +789,7 @@ docker compose up --build`}
               />
               <FAQItem
                 question="How is this different from existing tools?"
-                answer="Precogly is compliance-aware out of the box, ships with structured library packs (MITRE ATT&CK, STRIDE, LINDDUN, and more), includes a full REST API for automation and AI agents, and has no licensing fees. It fills the gap between ad-hoc open tools and expensive commercial platforms."
+                answer="Precogly is compliance-aware out of the box, ships with structured library packs (MITRE ATT&CK, STRIDE, LINDDUN, and more), includes AI-powered threat suggestion with bring-your-own-model support, a built-in MCP server for AI agent integration, CycloneDX 2.0 TM-BOM interoperability, and has no licensing fees. It fills the gap between ad-hoc open tools and expensive commercial platforms."
               />
               <FAQItem
                 question="Who is behind this project?"
@@ -809,7 +809,7 @@ docker compose up --build`}
               />
               <FAQItem
                 question="What frameworks does Precogly support?"
-                answer="MITRE ATT&CK, CAPEC, LINDDUN, STRIDE for threat identification. DORA, CRA, ASVS, NIST CSF, and SOC 2 for compliance mapping. More packs are added by the community."
+                answer="MITRE ATT&CK, CAPEC, CWE, MITRE ATLAS, LINDDUN, STRIDE, and OWASP LLM Top 10 for threat identification. DORA, CRA, ASVS, NIST CSF, and SOC 2 for compliance mapping. A vendor-neutral AI/ML threat library pack is also included. More packs are added by the community."
               />
             </div>
           </FadeIn>
