@@ -119,7 +119,7 @@ const fundedWorkAreas = [
   {
     icon: Server,
     title: "Infrastructure",
-    description: "Hosting for the live demo, documentation, CI, and community tooling.",
+    description: "Hosting for app.precogly.org, documentation, CI, and community tooling.",
   },
   {
     icon: GraduationCap,
@@ -318,7 +318,7 @@ export default function SponsorsPage() {
                 className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-accent hover:bg-accent-dark text-white font-medium rounded-lg transition-colors"
               >
                 <PlayCircle className="w-4 h-4" />
-                Live Demo
+                Try Precogly
               </a>
             </div>
           </div>

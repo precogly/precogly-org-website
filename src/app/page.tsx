@@ -187,7 +187,7 @@ export default function Home() {
                 className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-accent hover:bg-accent-dark text-white font-medium rounded-lg transition-colors"
               >
                 <PlayCircle className="w-4 h-4" />
-                Live Demo
+                Try Precogly
               </a>
             </div>
           </div>
@@ -240,7 +240,7 @@ export default function Home() {
                 className="inline-flex items-center gap-2 px-6 py-3 bg-accent hover:bg-accent-dark text-white font-medium rounded-lg transition-colors"
               >
                 <PlayCircle className="w-5 h-5" />
-                Try the Live Demo
+                Try Precogly
               </a>
               <a
                 href="#get-started"
@@ -547,7 +547,7 @@ export default function Home() {
                 className="inline-flex items-center gap-2 px-6 py-3 bg-accent hover:bg-accent-dark text-white font-medium rounded-lg transition-colors whitespace-nowrap self-start sm:self-auto"
               >
                 <PlayCircle className="w-5 h-5" />
-                Live Demo
+                Try Precogly
               </a>
             </div>
           </FadeIn>
@@ -848,7 +848,7 @@ docker compose up --build`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
-                aria-label="Live demo"
+                aria-label="Try Precogly"
               >
                 <PlayCircle className="w-5 h-5" />
               </a>
