@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   Award,
@@ -17,6 +18,7 @@ import {
   LinkedinIcon,
   Mail,
   PlayCircle,
+  HeartHandshake,
 } from "lucide-react";
 
 const DOCS_URL = "https://precogly.github.io/precogly";
@@ -133,7 +135,7 @@ export default function PractitionersPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-3">
-              <a
+              <Link
                 href="/"
                 className="flex items-center gap-3 hover:opacity-80 transition-opacity"
               >
@@ -147,23 +149,30 @@ export default function PractitionersPage() {
                 <span className="font-semibold text-xl text-primary">
                   Precogly
                 </span>
-              </a>
+              </Link>
             </div>
             <div className="hidden md:flex items-center gap-6 text-sm">
-              <a
+              <Link
                 href="/"
                 className="inline-flex items-center gap-1 text-muted hover:text-primary transition-colors"
               >
                 <ArrowLeft className="w-4 h-4" />
                 Home
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/learn"
                 className="inline-flex items-center gap-1 text-muted hover:text-primary transition-colors"
               >
                 <BookOpen className="w-4 h-4" />
                 Learn
-              </a>
+              </Link>
+              <Link
+                href="/sponsors"
+                className="inline-flex items-center gap-1 text-muted hover:text-primary transition-colors"
+              >
+                <HeartHandshake className="w-4 h-4" />
+                Sponsors
+              </Link>
               <a
                 href={DOCS_URL}
                 target="_blank"

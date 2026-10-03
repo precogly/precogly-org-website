@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   GithubIcon,
@@ -9,7 +10,6 @@ import {
   CheckCircle2,
   AlertTriangle,
   Users,
-  Building2,
   Rocket,
   ChevronDown,
   BookOpen,
@@ -25,6 +25,7 @@ import {
   Terminal,
   Award,
   PlayCircle,
+  HeartHandshake,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -140,20 +141,27 @@ export default function Home() {
               <a href="#faq" className="text-muted hover:text-primary transition-colors">
                 FAQ
               </a>
-              <a
+              <Link
                 href="/learn"
                 className="inline-flex items-center gap-1 text-muted hover:text-primary transition-colors"
               >
                 <BookOpen className="w-4 h-4" />
                 Learn
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/practitioners"
                 className="inline-flex items-center gap-1 text-muted hover:text-primary transition-colors"
               >
                 <Users className="w-4 h-4" />
                 Practitioners
-              </a>
+              </Link>
+              <Link
+                href="/sponsors"
+                className="inline-flex items-center gap-1 text-muted hover:text-primary transition-colors"
+              >
+                <HeartHandshake className="w-4 h-4" />
+                Sponsors
+              </Link>
               <a
                 href="https://precogly.github.io/precogly"
                 target="_blank"
@@ -706,13 +714,13 @@ docker compose up --build`}
               </FadeIn>
 
               <FadeIn>
-                <a
+                <Link
                   href="/practitioners"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary-light text-white font-medium rounded-lg transition-colors"
                 >
                   <Users className="w-5 h-5" />
                   View Practitioners
-                </a>
+                </Link>
               </FadeIn>
             </div>
           </div>
