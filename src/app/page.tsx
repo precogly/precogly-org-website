@@ -26,7 +26,16 @@ import {
   Award,
   PlayCircle,
   HeartHandshake,
+  MessageCircle,
+  Slack,
+  ListChecks,
+  Gauge,
 } from "lucide-react";
+
+const DISCORD_URL = "https://discord.gg/uBFZGJzpYa";
+const OWASP_SLACK_URL = "https://owasp.slack.com/archives/C0C1HV90L5P";
+const OWASP_SLACK_INVITE_URL = "https://owasp.org/slack/invite";
+const GITHUB_MILESTONES_URL = "https://github.com/precogly/precogly/milestones";
 import { useState } from "react";
 
 const fadeInUp = {
@@ -114,8 +123,8 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-10 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-primary/10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center gap-3">
+          <div className="flex items-center justify-between gap-8 h-16">
+            <div className="flex items-center gap-3 shrink-0">
               <Image
                 src="/precogly-logo.jpeg"
                 alt="Precogly Logo"
@@ -125,20 +134,17 @@ export default function Home() {
               />
               <span className="font-semibold text-xl text-primary">Precogly</span>
             </div>
-            <div className="hidden md:flex items-center gap-6 text-sm">
-              <a href="#why" className="text-muted hover:text-primary transition-colors">
-                Why Precogly
-              </a>
+            <div className="hidden lg:flex items-center gap-5 xl:gap-6 text-sm whitespace-nowrap">
               <a href="#features" className="text-muted hover:text-primary transition-colors">
                 Features
               </a>
               <a href="#get-started" className="text-muted hover:text-primary transition-colors">
                 Get Started
               </a>
-              <a href="#collaborators" className="text-muted hover:text-primary transition-colors">
+              <a href="#collaborators" className="hidden xl:inline text-muted hover:text-primary transition-colors">
                 Collaborate
               </a>
-              <a href="#faq" className="text-muted hover:text-primary transition-colors">
+              <a href="#faq" className="hidden xl:inline text-muted hover:text-primary transition-colors">
                 FAQ
               </a>
               <Link
@@ -345,8 +351,8 @@ export default function Home() {
           <FadeIn>
             <div className="aspect-video rounded-xl shadow-lg overflow-hidden">
               <iframe
-                src="https://www.youtube.com/embed/5sSuZOAtyn4"
-                title="Precogly Walkthrough"
+                src="https://www.youtube.com/embed/iSDU88X0XMw"
+                title="A Tour of OWASP Precogly Open Source Threat Modeling Tool"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="w-full h-full"
@@ -446,6 +452,50 @@ export default function Home() {
                 </div>
                 <p className="text-muted leading-relaxed">
                   Workspace-based threat modeling with real-time collaboration.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn>
+              <div className="bg-surface p-8 rounded-xl shadow-sm border border-primary/5">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 bg-accent/10 rounded-lg">
+                    <Gauge className="w-6 h-6 text-accent" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-primary">Risk Register</h3>
+                </div>
+                <p className="text-muted leading-relaxed">
+                  Risks with ratings, owners and responses, a kanban board, and tracking of overdue countermeasures.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn>
+              <div className="bg-surface p-8 rounded-xl shadow-sm border border-primary/5">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 bg-accent/10 rounded-lg">
+                    <ListChecks className="w-6 h-6 text-accent" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-primary">Use Cases &amp; Abuse Cases</h3>
+                  <span className="ml-auto text-xs font-medium px-2 py-0.5 rounded-full bg-primary/10 text-primary whitespace-nowrap">v0.5</span>
+                </div>
+                <p className="text-muted leading-relaxed">
+                  Link what users do to abuse cases, threats and countermeasures, so you can analyze a system by behavior as well as by its diagram.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn>
+              <div className="bg-surface p-8 rounded-xl shadow-sm border border-primary/5">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 bg-accent/10 rounded-lg">
+                    <ClipboardCheck className="w-6 h-6 text-accent" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-primary">Review &amp; Approval</h3>
+                  <span className="ml-auto text-xs font-medium px-2 py-0.5 rounded-full bg-primary/10 text-primary whitespace-nowrap">v0.5</span>
+                </div>
+                <p className="text-muted leading-relaxed">
+                  Sign-off workflow with a clear flag when a model has changed since it was approved. Review due dates and validity periods built in.
                 </p>
               </div>
             </FadeIn>
@@ -601,6 +651,46 @@ docker compose up --build`}
               </a>
             </div>
           </FadeIn>
+
+          <FadeIn>
+            <div className="mt-10 text-center">
+              <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
+                Join the conversation
+              </p>
+              <div className="flex flex-wrap justify-center gap-3">
+                <a
+                  href={DISCORD_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 border border-primary/20 hover:border-primary/40 text-primary rounded-lg transition-colors text-sm"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  Discord
+                </a>
+                <a
+                  href={OWASP_SLACK_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 border border-primary/20 hover:border-primary/40 text-primary rounded-lg transition-colors text-sm"
+                >
+                  <Slack className="w-4 h-4" />
+                  #project-precogly on OWASP Slack
+                </a>
+              </div>
+              <p className="text-xs text-muted mt-3">
+                Not on OWASP Slack yet?{" "}
+                <a
+                  href={OWASP_SLACK_INVITE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent hover:underline"
+                >
+                  Get an invite
+                </a>
+                .
+              </p>
+            </div>
+          </FadeIn>
         </div>
       </Section>
 
@@ -738,43 +828,82 @@ docker compose up --build`}
 
           <div className="space-y-6">
             <FadeIn>
-              <div className="flex items-center gap-4 bg-surface p-6 rounded-xl shadow-sm">
-                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+              <div className="flex items-start gap-4 bg-surface p-6 rounded-xl shadow-sm">
+                <div className="w-3 h-3 mt-1.5 bg-green-500 rounded-full shrink-0"></div>
                 <div>
-                  <h3 className="font-semibold text-primary">v0.4.0 Released</h3>
-                  <p className="text-muted">AI-powered threat suggestion, MCP server, CycloneDX 2.0, risk register, and OAuth 2.1.</p>
+                  <h3 className="font-semibold text-primary">v0.3 &mdash; DFD Editor Features <span className="text-sm font-normal text-muted">(released July 2026)</span></h3>
+                  <p className="text-muted">Nested components, typed zones, boundaries and flows, notation switching, undo/redo.</p>
                 </div>
               </div>
             </FadeIn>
 
             <FadeIn>
-              <div className="flex items-center gap-4 bg-surface p-6 rounded-xl shadow-sm">
-                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+              <div className="flex items-start gap-4 bg-surface p-6 rounded-xl shadow-sm">
+                <div className="w-3 h-3 mt-1.5 bg-green-500 rounded-full shrink-0"></div>
                 <div>
-                  <h3 className="font-semibold text-primary">Library Packs &amp; Taxonomies</h3>
-                  <p className="text-muted">AWS, Azure, GCP, banking, AI/ML, CAPEC, CWE, MITRE ATLAS, and OWASP LLM Top 10 packs.</p>
+                  <h3 className="font-semibold text-primary">v0.4 &mdash; MCP and AI Agents Support <span className="text-sm font-normal text-muted">(released September 2026)</span></h3>
+                  <p className="text-muted">AI-powered threat suggestion, DFD generation from architecture diagrams, built-in MCP server, bring-your-own-model, CycloneDX 2.0 TM-BOM, risk register, and OAuth 2.1.</p>
                 </div>
               </div>
             </FadeIn>
 
             <FadeIn>
-              <div className="flex items-center gap-4 bg-surface p-6 rounded-xl shadow-sm">
-                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+              <div className="flex items-start gap-4 bg-surface p-6 rounded-xl shadow-sm border border-yellow-500/30">
+                <div className="w-3 h-3 mt-1.5 bg-yellow-500 rounded-full animate-pulse shrink-0"></div>
                 <div>
-                  <h3 className="font-semibold text-primary">AI Agent Integration</h3>
-                  <p className="text-muted">Built-in MCP server, bring-your-own-model, DFD generation from architecture diagrams.</p>
+                  <h3 className="font-semibold text-primary">v0.5 &mdash; Threat Modeling Program Management and TM-BOM Alignment <span className="text-sm font-normal text-muted">(in progress)</span></h3>
+                  <ul className="text-muted mt-2 space-y-1 list-disc list-inside">
+                    <li>See threat modeling coverage and risk management progress across the organization.</li>
+                    <li>Report on risk ownership, treatment status and overdue actions by business unit, team and product.</li>
+                    <li>Align with the Threat Modeling Manifesto&apos;s Capabilities, especially Measurement and Program Management.</li>
+                    <li>Align Precogly&apos;s data model with the CycloneDX 2.0 TM-BOM (done on <code className="text-sm">main</code>, not yet released).</li>
+                  </ul>
                 </div>
               </div>
             </FadeIn>
 
             <FadeIn>
-              <div className="flex items-center gap-4 bg-surface p-6 rounded-xl shadow-sm">
-                <div className="w-3 h-3 bg-yellow-500 rounded-full animate-pulse"></div>
+              <div className="flex items-start gap-4 bg-surface p-6 rounded-xl shadow-sm">
+                <div className="w-3 h-3 mt-1.5 bg-gray-300 rounded-full shrink-0"></div>
                 <div>
-                  <h3 className="font-semibold text-primary">Community Growth</h3>
-                  <p className="text-muted">Growing contributor ecosystem and partner network.</p>
+                  <h3 className="font-semibold text-primary">v0.6 &mdash; Risk Management</h3>
+                  <ul className="text-muted mt-2 space-y-1 list-disc list-inside">
+                    <li>Record risks from vulnerabilities and assessments alongside those from threat modeling.</li>
+                    <li>Assign risk owners, record treatment decisions and track residual risk.</li>
+                    <li>Run risk assessments and produce reports that support compliance, including the EU CRA.</li>
+                  </ul>
                 </div>
               </div>
+            </FadeIn>
+
+            <FadeIn>
+              <div className="flex items-start gap-4 bg-surface p-6 rounded-xl shadow-sm">
+                <div className="w-3 h-3 mt-1.5 bg-gray-300 rounded-full shrink-0"></div>
+                <div>
+                  <h3 className="font-semibold text-primary">v0.7 &mdash; Security Controls Management</h3>
+                  <ul className="text-muted mt-2 space-y-1 list-disc list-inside">
+                    <li>Show auditors that security controls are in place and working, with verification steps and evidence.</li>
+                    <li>Maintain control libraries at product and organization levels.</li>
+                    <li>Integrate with development and security tools, starting with GitHub and DefectDojo.</li>
+                    <li>Apply ISO/IEC 27034 concepts across applications, infrastructure and devices.</li>
+                  </ul>
+                </div>
+              </div>
+            </FadeIn>
+
+            <FadeIn>
+              <p className="text-center text-sm text-muted pt-2">
+                Follow release work on the{" "}
+                <a
+                  href={GITHUB_MILESTONES_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent hover:underline"
+                >
+                  GitHub milestones
+                </a>
+                .
+              </p>
             </FadeIn>
           </div>
         </div>
@@ -813,7 +942,7 @@ docker compose up --build`}
               />
               <FAQItem
                 question="Can I contribute?"
-                answer={<>Absolutely. We welcome contributions to the core platform, library packs, documentation, and bug reports. Head to <a href="https://github.com/precogly/precogly" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">GitHub</a> to get started.</>}
+                answer={<>Absolutely. We welcome contributions to the core platform, library packs, documentation, and bug reports. Head to <a href="https://github.com/precogly/precogly" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">GitHub</a> to get started, or join the conversation on <a href={DISCORD_URL} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">Discord</a> or in <a href={OWASP_SLACK_URL} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">#project-precogly</a> on OWASP Slack (<a href={OWASP_SLACK_INVITE_URL} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">get an invite</a>).</>}
               />
               <FAQItem
                 question="What frameworks does Precogly support?"
@@ -869,6 +998,24 @@ docker compose up --build`}
                 aria-label="Documentation"
               >
                 <BookOpen className="w-5 h-5" />
+              </a>
+              <a
+                href={DISCORD_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
+                aria-label="Discord"
+              >
+                <MessageCircle className="w-5 h-5" />
+              </a>
+              <a
+                href={OWASP_SLACK_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
+                aria-label="OWASP Slack"
+              >
+                <Slack className="w-5 h-5" />
               </a>
               <a
                 href="https://www.linkedin.com/in/vikramadityanarayan/"
